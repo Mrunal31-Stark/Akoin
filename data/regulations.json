@@ -1,0 +1,32 @@
+[
+  {
+    "id": "PRA_OF_001",
+    "title": "Own funds definition",
+    "text": "Own funds comprise Common Equity Tier 1 (CET1), Additional Tier 1 (AT1), and Tier 2 (T2) capital. Total own funds equal the sum of eligible CET1, AT1, and T2 after applicable deductions.",
+    "tags": ["own funds", "CET1", "AT1", "T2", "total"]
+  },
+  {
+    "id": "PRA_OF_010",
+    "title": "CET1 eligibility",
+    "text": "CET1 capital includes ordinary shares and retained earnings net of regulatory deductions. Institutions must report CET1 in the applicable COREP own funds template line for CET1 capital.",
+    "tags": ["CET1", "corep", "own funds"]
+  },
+  {
+    "id": "PRA_OF_020",
+    "title": "AT1 eligibility",
+    "text": "AT1 capital includes eligible AT1 instruments and related premium, net of deductions. Report AT1 in the COREP own funds template line for AT1 capital.",
+    "tags": ["AT1", "corep", "own funds"]
+  },
+  {
+    "id": "PRA_OF_030",
+    "title": "Tier 2 eligibility",
+    "text": "Tier 2 capital includes eligible Tier 2 instruments and provisions, net of deductions. Report Tier 2 in the COREP own funds template line for Tier 2 capital.",
+    "tags": ["T2", "Tier 2", "corep", "own funds"]
+  },
+  {
+    "id": "EBA_CA1_001",
+    "title": "COREP CA1 template instructions",
+    "text": "Template CA1 captures own funds components. Lines 010, 020, 030 capture CET1, AT1, and Tier 2 respectively. Line 060 captures Total own funds. Report amounts in GBP thousands.",
+    "tags": ["CA1", "template", "line 010", "line 020", "line 030", "line 060"]
+  }
+]
