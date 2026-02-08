@@ -12,10 +12,7 @@ This repository contains a lightweight prototype for a regulatory reporting assi
 ## Run the prototype
 
 ```bash
-PYTHONPATH=src python -m corep_assistant.main \
-  --question "How should we report own funds for year-end?" \
-  --scenario examples/scenario.json \
-  --output outputs/run-1
+set PYTHONPATH=src && python -m corep_assistant.main --question "How should we report own funds for year-end?" --scenario examples/scenario.json --output outputs/run-1
 ```
 
 Artifacts are written to the output directory:
