@@ -1,0 +1,8 @@
+{
+  "entity_id": "UKBANK123",
+  "reporting_date": "2024-12-31",
+  "cet1_gbp_thousands": 125000,
+  "at1_gbp_thousands": 35000,
+  "t2_gbp_thousands": 20000,
+  "notes": "Values are after regulatory deductions."
+}
