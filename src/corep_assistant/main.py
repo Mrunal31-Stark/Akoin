@@ -3,7 +3,6 @@ import json
 import os
 from dataclasses import dataclass, asdict
 from datetime import datetime
-from pathlib import Path
 from typing import Dict, List, Tuple
 
 
@@ -166,25 +165,11 @@ def main() -> None:
     parser.add_argument("--schema", default="data/template_schema.json", help="Path to template schema JSON")
     args = parser.parse_args()
 
-    repo_root = Path(__file__).resolve().parents[2]
-
-    def resolve_path(path_value: str) -> Path:
-        candidate = Path(path_value)
-        if candidate.exists():
-            return candidate
-        fallback = repo_root / path_value
-        return fallback
-
-    scenario_path = resolve_path(args.scenario)
-    regulations_path = resolve_path(args.regulations)
-    schema_path = resolve_path(args.schema)
-    output_path = resolve_path(args.output)
-
-    with open(scenario_path, "r", encoding="utf-8") as handle:
+    with open(args.scenario, "r", encoding="utf-8") as handle:
         scenario = json.load(handle)
 
-    regulations = load_regulations(str(regulations_path))
-    schema = load_template_schema(str(schema_path))
+    regulations = load_regulations(args.regulations)
+    schema = load_template_schema(args.schema)
 
     retrieved = retrieve_sections(args.question, scenario, regulations)
     audit_log = build_audit_log(retrieved)
@@ -203,10 +188,10 @@ def main() -> None:
         audit_log=section_refs,
     )
 
-    os.makedirs(output_path, exist_ok=True)
-    structured_path = os.path.join(output_path, "structured_output.json")
-    template_path = os.path.join(output_path, "template_extract.md")
-    audit_path = os.path.join(output_path, "audit_log.json")
+    os.makedirs(args.output, exist_ok=True)
+    structured_path = os.path.join(args.output, "structured_output.json")
+    template_path = os.path.join(args.output, "template_extract.md")
+    audit_path = os.path.join(args.output, "audit_log.json")
 
     with open(structured_path, "w", encoding="utf-8") as handle:
         json.dump(asdict(structured_output), handle, indent=2)

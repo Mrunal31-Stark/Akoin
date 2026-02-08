@@ -12,7 +12,7 @@ This repository contains a lightweight prototype for a regulatory reporting assi
 ## Run the prototype
 
 ```bash
-python src/corep_assistant/main.py \
+PYTHONPATH=src python -m corep_assistant.main \
   --question "How should we report own funds for year-end?" \
   --scenario examples/scenario.json \
   --output outputs/run-1
