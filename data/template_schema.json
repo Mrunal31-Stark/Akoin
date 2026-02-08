@@ -1,0 +1,31 @@
+{
+  "template_id": "CA1",
+  "template_name": "Own Funds",
+  "currency": "GBP thousands",
+  "fields": [
+    {
+      "field_code": "CA1.010",
+      "line": "010",
+      "label": "Common Equity Tier 1 capital",
+      "required": true
+    },
+    {
+      "field_code": "CA1.020",
+      "line": "020",
+      "label": "Additional Tier 1 capital",
+      "required": true
+    },
+    {
+      "field_code": "CA1.030",
+      "line": "030",
+      "label": "Tier 2 capital",
+      "required": true
+    },
+    {
+      "field_code": "CA1.060",
+      "line": "060",
+      "label": "Total own funds",
+      "required": true
+    }
+  ]
+}
